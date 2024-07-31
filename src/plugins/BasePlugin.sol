@@ -53,9 +53,9 @@ abstract contract BasePlugin is ERC165, IPlugin {
     /// @param data Optional bytes array to be decoded and used by the plugin to setup initial plugin data for the
     /// modular account.
     function onInstall(bytes calldata data) external virtual {
-        if (msg.sender.code.length == 0) {
-            revert NotContractCaller(msg.sender);
-        }
+        // if (msg.sender.code.length == 0) {
+        //     revert NotContractCaller(msg.sender);
+        // }
         _onInstall(data);
     }
 
